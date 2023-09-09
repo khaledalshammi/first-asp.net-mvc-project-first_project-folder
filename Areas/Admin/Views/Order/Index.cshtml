@@ -1,0 +1,109 @@
+﻿@model IEnumerable<OrderHeader>
+@{
+    ViewData["Title"] = "khaled";
+    var status = Context.Request.Query["status"];
+    var inprocess = "";
+    var pending = "";
+    var completed = "";
+    var approved = "";
+    var all = "";
+
+    switch (status)
+    {
+        case "inprocess" :
+            inprocess="active";
+            break;
+        case "pending" :
+            pending="active";
+            break;
+        case "completed" :
+            completed="active";
+            break;
+        case "approved" :
+            approved="active";
+            break;
+        case "all" :
+            all="active";
+            break;
+    }
+}
+
+<div class="container p-3">
+    <div class="row justify-content-center pt-4">
+        <div class="col-6 text-center">
+            <h2 class="text-primary">Order List</h2>
+        </div>
+    </div>
+    <br />
+    <div class="row justify-content-end d-flex mb-3">
+        <div class="col-auto">
+            <a class="text-decoration-none" asp-controller="Order" asp-action="Index" asp-route-status="inprocess">
+                <li class="btn btn-light text-success @inprocess">In Process</li>
+            </a>
+        </div>
+        <div class="col-auto pl-1">
+            <a class="text-decoration-none" asp-controller="Order" asp-action="Index" asp-route-status="pending">
+                <li class="btn btn-light text-success @pending">Payment Pending</li>
+            </a>
+        </div>
+        <div class="col-auto pl-1">
+            <a class="text-decoration-none" asp-controller="Order" asp-action="Index" asp-route-status="completed">
+                <li class="btn btn-light text-success @completed">Completed</li>
+            </a>
+        </div>
+        <div class="col-auto pl-1">
+            <a class="text-decoration-none" asp-controller="Order" asp-action="Index" asp-route-status="approved">
+                <li class="btn btn-light text-success @approved">Approved</li>
+            </a>
+        </div>
+        <div class="col-auto pl-1">
+            <a class="text-decoration-none" asp-controller="Order" asp-action="Index" asp-route-status="all">
+                <li class="btn btn-light text-success @all">All</li>
+            </a>
+        </div>
+    </div>
+    <table class="table table-bordered table-striped" style="width:100%">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Phone Number</th>
+                <th>Email</th>
+                <th>Status</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var obj in Model.OrderBy(i => i.Name))
+            {
+                <tr>
+                    <td>
+                        @obj.Id
+                    </td>
+                    <td>
+                        @obj.Name
+                    </td>
+                    <td>
+                        @obj.PhoneNumber
+                    </td>
+                    <td>
+                        @obj.ApplicationUser.Email
+                    </td>
+                    <td>
+                        @obj.OrderStatus
+                    </td>
+                    <td>
+                        @obj.OrderTotal
+                    </td>
+                    <td>
+                        <div class="w-75 btn-group" role="group">
+                            <a asp-controller="Order" asp-action="Details" asp-route-orderId="@obj.Id" class="btn btn-success mx-2">
+                                <i class="bi"></i>Details
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

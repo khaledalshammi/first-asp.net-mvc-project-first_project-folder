@@ -1,0 +1,20 @@
+﻿@model IEnumerable<Product>
+
+@if ((int)ViewData["count"] > 0)
+{
+    @foreach (var product in Model)
+    {
+        <h1>@product.Title</h1>
+    }
+
+}
+else
+{
+    <div class="container">
+        <div class="row justify-content-center align-items-center" style="height: 100vh;">
+            <div class="col-4 text-center text-xxl">
+                It Does Not Match Any Product
+            </div>
+        </div>
+    </div>
+}

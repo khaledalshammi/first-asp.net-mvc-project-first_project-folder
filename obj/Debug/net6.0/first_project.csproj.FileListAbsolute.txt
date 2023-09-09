@@ -1,0 +1,10 @@
+C:\Users\khalo\OneDrive\سطح المكتب\asp.net\first_project\first_project\obj\Debug\net6.0\first_project.csproj.AssemblyReference.cache
+C:\Users\khalo\OneDrive\سطح المكتب\asp.net\first_project\first_project\obj\Debug\net6.0\MvcTestingAppManifest.json
+C:\Users\khalo\OneDrive\سطح المكتب\asp.net\first_project\first_project\obj\Debug\net6.0\first_project.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\khalo\OneDrive\سطح المكتب\asp.net\first_project\first_project\obj\Debug\net6.0\first_project.AssemblyInfoInputs.cache
+C:\Users\khalo\OneDrive\سطح المكتب\asp.net\first_project\first_project\obj\Debug\net6.0\first_project.AssemblyInfo.cs
+C:\Users\khalo\OneDrive\سطح المكتب\asp.net\first_project\first_project\obj\Debug\net6.0\first_project.csproj.CoreCompileInputs.cache
+C:\Users\khalo\OneDrive\سطح المكتب\asp.net\first_project\first_project\obj\Debug\net6.0\first_project.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\khalo\OneDrive\سطح المكتب\asp.net\first_project\first_project\obj\Debug\net6.0\first_project.RazorAssemblyInfo.cache
+C:\Users\khalo\OneDrive\سطح المكتب\asp.net\first_project\first_project\obj\Debug\net6.0\first_project.RazorAssemblyInfo.cs
+C:\Users\khalo\OneDrive\سطح المكتب\asp.net\first_project\first_project\obj\Debug\net6.0\first_project.sourcelink.json

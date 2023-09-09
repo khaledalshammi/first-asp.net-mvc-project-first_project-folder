@@ -1,0 +1,3 @@
+﻿#: Areas/Customer/Views/Test/Translate.cshtml:4
+msgid "Hello world!"
+msgstr "اهلا بالعالم"

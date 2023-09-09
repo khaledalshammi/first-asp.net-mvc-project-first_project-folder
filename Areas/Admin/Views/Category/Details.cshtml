@@ -1,0 +1,26 @@
+﻿@model Category
+
+Hello @Model.Name
+
+<div class="border p-3 mt-4">
+    <div class="row pb-2">
+        <h2 class="text-primary">Category Details</h2>
+        <hr />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" disabled class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="DisplayOrder"></label>
+        <input asp-for="DisplayOrder" disabled class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="CreateDateTime"></label>
+        <input asp-for="CreateDateTime" disabled class="form-control" />
+    </div>
+    <a asp-controller="Category" asp-action="Index" class="btn btn-secondary" style="width:150px">
+        Back To List
+    </a>
+</div>
